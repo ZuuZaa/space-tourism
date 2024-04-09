@@ -1,12 +1,12 @@
 import { Header } from "@/components/header";
 import { Outlet } from "react-router-dom";
-import "./main-layout.style.scss";
+import { StyledMainLayout } from "./main-layout.styled";
 
 export const MainLayout = () => {
   return (
-    <div className="main-layout">
+    <StyledMainLayout>
       <Header />
       <Outlet />
-    </div>
+    </StyledMainLayout>
   );
 };

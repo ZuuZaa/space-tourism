@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
-import "./home.style.scss";
+import { StyledHomePage } from "./home-page.styled";
+import { NAV_LINKS } from "../../config/constans";
 
-export const Home = () => {
+const HomePage = () => {
+  const bgUrls = NAV_LINKS.HOME.background
+  console.log({...bgUrls})
   return (
-    <main className="home-page page-container">
+    <StyledHomePage {...bgUrls} className="page-container">
       <div className="page-wrapper">
         <section className="page-content">
           <div className="content-text">
@@ -18,13 +21,15 @@ export const Home = () => {
           </div>
         </section>
         <section className="explore">
-          <Link to="/destination/moon">
+          <Link to="/destination">
             <button className="explore-button">
               <h4 className="btn">EXPLORE</h4>
             </button>
           </Link>
         </section>
       </div>
-    </main>
+    </StyledHomePage>
   );
 };
+
+export default HomePage;

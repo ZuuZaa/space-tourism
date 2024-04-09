@@ -1,6 +1,6 @@
-@import "@/assets/scss/colors";
+import styled from "styled-components";
 
-.home-page {
+export const StyledHomePage = styled.main`
   display: flex;
   align-items: flex-end;
   .page-wrapper {
@@ -27,10 +27,10 @@
 
       .explore-button {
         border-radius: 50%;
-        background: $color-white;
+        background: #fff;
         transition: outline-width 0.3s, opacity 0.3s;
         .btn {
-          color: $color-primary-dark;
+          color: #0b0d17;
         }
         &:hover {
           outline: 8.8rem solid rgba(255, 255, 255, 0.1);
@@ -38,17 +38,15 @@
       }
     }
   }
-}
 
-@media screen and (max-width: 767px) {
-  .home-page {
-    background-image: url("../../assets/images/home/background-home-mobile.jpg");
+  @media screen and (max-width: 767px) {
+    background-image: url(${({ mobile }) => mobile});
     .page-wrapper {
-        height: 100%;
-        padding: 11.2rem 2.4rem 5rem;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+      height: 100%;
+      padding: 11.2rem 2.4rem 5rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
       .page-content {
         text-align: center;
       }
@@ -62,12 +60,10 @@
       }
     }
   }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .home-page {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
     padding-top: 12.55rem;
-    background-image: url("../../assets/images/home/background-home-tablet.jpg");
+    background-image: url(${({ tablet }) => tablet});
     .page-wrapper {
       display: flex;
       flex-direction: column;
@@ -85,13 +81,11 @@
       }
     }
   }
-}
 
-@media screen and (min-width: 1440px) {
-  .home-page {
+  @media screen and (min-width: 1440px) {
     padding-inline: 11.5%;
     padding-bottom: 14.5vh;
-    background-image: url("../../assets/images/home/background-home-desktop.jpg");
+    background-image: url(${({ desktop }) => desktop});
     .page-wrapper {
       display: flex;
       justify-content: space-between;
@@ -108,4 +102,4 @@
       }
     }
   }
-}
+`;

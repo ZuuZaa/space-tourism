@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import path from "@/assets/icons/path.svg";
 import { useState } from "react";
-import "./header.style.scss";
-import { navLinks } from "./constants";
+import "./header.scss";
+import { NAV_LINKS } from "@/config/constans";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuToggleHandler = () => setIsOpen((prev) => !prev);
+  const navLinks = Object.values(NAV_LINKS)
 
   return (
     <header className={isOpen ? "show-nav" : "hide-nav"}>
@@ -23,7 +24,7 @@ export const Header = () => {
       <nav>
         <ul className="navbar">
           {navLinks.map((item) => (
-            <li className="nav-text" key={item.id}>
+            <li className="nav-text" key={item.name}>
               <NavLink
                 exact={item.active}
                 to={item.link}
