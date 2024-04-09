@@ -1,0 +1,215 @@
+@use "assets/scss/colors.scss";
+
+
+.crew-container {
+
+    .crew-content {
+        .info {
+            display: flex;
+
+            .role {
+                opacity: .5;
+            }
+
+            .name {
+                white-space: nowrap;
+                margin-top: .8rem;
+
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+
+                    a {
+                        background: colors.$white;
+                        display: inline-block;
+                        border-radius: 50%;
+                        opacity: .17;
+
+                        &:is(.active) {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .page-layout:has(.crew-container) {
+        padding-bottom: 0;
+    }
+
+    .crew-container {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+
+        .crew-content {
+
+            .info {
+                flex-direction: column-reverse;
+
+                .bio {
+                    margin-top: 1.6rem;
+                    height: 10rem;
+                }
+
+                nav {
+                    margin-block: 3.2rem;
+
+                    ul {
+                        width: 8.8rem;
+
+                        a {
+                            height: 1rem;
+                            width: 1rem;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .image-container {
+            padding-top: 3.2rem;
+            border-bottom: .1rem solid #ffffff40;
+            display: flex;
+            justify-content: center;
+
+            .image-wrapper {
+                height: 32.7rem;
+                top: 4rem;
+                bottom: 0;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+    .page-layout:has(.crew-container) {
+        padding-bottom: 0;
+        overflow-y: hidden;
+    }
+
+    .crew-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6rem;
+
+        .crew-content {
+
+            .info {
+                flex-direction: column;
+
+                .bio {
+                    margin-top: 1.6rem;
+                    height: 8.4rem;
+                    padding-inline: 6rem;
+                }
+
+                nav {
+                    margin-top: 4rem;
+
+                    ul {
+                        width: 8.8rem;
+
+                        a {
+                            height: 1rem;
+                            width: 1rem;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .image-container {
+            flex-grow: 1;
+            padding: 4rem;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            .image-wrapper {
+                position: absolute;
+                top: 4rem;
+                align-self: stretch;
+                bottom: 0;
+                height: calc(100% - 4rem);
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .page-layout:has(.crew-container) {
+        overflow-y: hidden;
+        position: relative;
+        padding-bottom: 0;
+    }
+
+    .crew-container {
+        display: grid;
+        grid-template-columns: 61.4rem 1fr;
+        align-items: center;
+        height: 100%;
+
+
+        .crew-content {
+            .info {
+                flex-direction: column;
+
+                .name {
+                    margin-top: 1.5rem;
+                }
+
+                .bio {
+                    margin-top: 2.7rem;
+                    width: 44.4rem;
+                    height: 16rem;
+                }
+
+                nav {
+                    margin-top: 12rem;
+                    justify-content: flex-start;
+
+                    ul {
+                        width: 13.2rem;
+
+                        a {
+                            height: 1.5rem;
+                            width: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .image-wrapper {
+            position: absolute;
+            bottom: 0;
+
+        }
+    }
+}

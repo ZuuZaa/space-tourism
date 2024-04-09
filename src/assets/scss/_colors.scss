@@ -1,0 +1,12 @@
+// ----- Primary color -----
+$colors: (
+  "primary-dark": #0b0d17,
+  "primary-light": #d0d6f9,
+  "black": #000000,
+  "white": #ffffff,
+) !default;
+
+$color-primary-light: map-get($colors, "primary-light");
+$color-primary-dark: map-get($colors, "primary-dark");
+$color-black: map-get($colors, "black");
+$color-white: map-get($colors, "white");

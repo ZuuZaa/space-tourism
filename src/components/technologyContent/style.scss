@@ -1,0 +1,224 @@
+@use "assets/scss/colors.scss";
+
+.tech-container {
+
+    .tech-content {
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+        .tech-card {
+            display: flex;
+
+            nav {
+                li a {
+                    color: colors.$white;
+                    border-radius: 50%;
+                    border: .1rem solid hsla(0, 0%, 100%, 0.25);
+                    display: grid;
+                    place-content: center;
+
+                    &:hover {
+                        border-color: colors.$white;
+                    }
+
+                    &:is(.active) {
+                        color: colors.$black;
+                        background: colors.$white;
+                        border-color: colors.$white;
+                    }
+                }
+            }
+
+            .card-content {
+                .tech-name {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .tech-img {
+        width: 100%;
+
+        .img-wrapper {
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .tech-container {
+        .tech-content {
+            display: flex;
+            flex-direction: column-reverse;
+            padding-block: 3.2rem;
+
+            .tech-card {
+                flex-direction: column;
+                text-align: center;
+
+                nav {
+                    margin-block: 3.4rem 2.6rem;
+
+                    ul {
+                        display: flex;
+                        justify-content: center;
+
+                        li {
+                            a {
+                                font-size: 1.6rem;
+                                line-height: 1.8rem;
+                                width: 4rem;
+                                height: 4rem;
+                                //  margin-block: auto;
+
+                            }
+
+                            &:nth-child(2) {
+                                margin-inline: 1.6rem;
+                            }
+                        }
+
+                    }
+                }
+
+                .tech-decsription {
+                    margin-inline: 2.4rem
+                }
+
+                .card-content {
+                    .tech-name {
+                        margin-block: .9rem 1.6rem
+                    }
+                }
+            }
+        }
+
+        .tech-img {
+            .img-wrapper {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+    .tech-container {
+        .tech-content {
+            display: flex;
+            flex-direction: column-reverse;
+            padding-block: 6rem;
+
+            .tech-card {
+                flex-direction: column;
+                text-align: center;
+
+                nav {
+                    margin-block: 5.6rem 4.4rem;
+
+                    ul {
+                        display: flex;
+                        justify-content: center;
+
+                        li {
+                            a {
+                                font-size: 2.4rem;
+                                line-height: 2.8rem;
+                                width: 6rem;
+                                height: 6rem;
+                                margin-block: auto;
+                            }
+
+                            &:nth-child(2) {
+                                margin-inline: 1.6rem;
+                            }
+                        }
+                    }
+                }
+
+                .tech-decsription {
+                    width: 45.8rem;
+                }
+
+                .card-content {
+                    .tech-name {
+                        margin-block: 1.6rem
+                    }
+                }
+            }
+        }
+
+        .tech-img {
+            .img-wrapper {
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+    .tech-container {
+        height: 100%;
+
+        .tech-content {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            padding-block: 2.6rem;
+
+            .tech-card {
+
+                nav {
+                    margin-right: 8rem;
+
+                    li a {
+                        color: colors.$white;
+                        font-size: 3.3rem;
+                        line-height: 3.7rem;
+                        width: 8rem;
+                        height: 8rem;
+                        margin-bottom: 3.2rem;
+                    }
+                }
+
+                .tech-decsription {
+                    width: 44.4rem;
+                }
+
+                .card-content {
+                    .tech-name {
+                        margin-block: 1.1rem 1.7rem;
+                    }
+                }
+            }
+        }
+
+        .tech-img {
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+
+            .img-wrapper {
+                height: 52.7rem;
+                width: 51.5rem;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+}
