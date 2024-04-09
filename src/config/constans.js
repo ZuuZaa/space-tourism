@@ -19,7 +19,8 @@ export const NAV_LINKS = {
     background: {
       mobile: "src/assets/images/destination/background-destination-mobile.jpg",
       tablet: "src/assets/images/destination/background-destination-tablet.jpg",
-      desktop: "src/assets/images/destination/background-destination-desktop.jpg",
+      desktop:
+        "src/assets/images/destination/background-destination-desktop.jpg",
     },
     active: false,
   },
@@ -27,7 +28,7 @@ export const NAV_LINKS = {
     name: "crew",
     order: "02",
     link: "/crew",
-    description: "",
+    description: "Meet your crew",
     background: {
       mobile: "src/assets/images/crew/background-crew-mobile.jpg",
       tablet: "src/assets/images/crew/background-crew-tablet.jpg",
@@ -39,7 +40,7 @@ export const NAV_LINKS = {
     name: "technology",
     order: "03",
     link: "/technology",
-    description: "",
+    description: "SPACE LAUNCH 101",
     background: {
       mobile: "src/assets/images/technology/background-technology-mobile.jpg",
       tablet: "src/assets/images/technology/background-technology-tablet.jpg",

@@ -2,7 +2,7 @@ import { Header } from "@/components/header";
 import { Outlet } from "react-router-dom";
 import { StyledMainLayout } from "./main-layout.styled";
 
-export const MainLayout = () => {
+const MainLayout = () => {
   return (
     <StyledMainLayout>
       <Header />
@@ -10,3 +10,5 @@ export const MainLayout = () => {
     </StyledMainLayout>
   );
 };
+
+export default MainLayout;
