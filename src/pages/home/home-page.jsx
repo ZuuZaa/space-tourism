@@ -20,7 +20,7 @@ const HomePage = () => {
           </div>
         </section>
         <section className="explore">
-          <Link to="/destination">
+          <Link to="/destination/moon">
             <button className="explore-button">
               <h4 className="btn">EXPLORE</h4>
             </button>
