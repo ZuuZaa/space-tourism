@@ -3,10 +3,9 @@ import { StyledHomePage } from "./home-page.styled";
 import { NAV_LINKS } from "../../config/constans";
 
 const HomePage = () => {
-  const bgUrls = NAV_LINKS.HOME.background
-  console.log({...bgUrls})
+
   return (
-    <StyledHomePage {...bgUrls} className="page-container">
+    <StyledHomePage {...NAV_LINKS.HOME.background} className="page-container">
       <div className="page-wrapper">
         <section className="page-content">
           <div className="content-text">

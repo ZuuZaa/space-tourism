@@ -40,7 +40,7 @@ export const StyledHomePage = styled.main`
   }
 
   @media screen and (max-width: 767px) {
-    background-image: url(${({ mobile }) => mobile});
+    background-image: url(${({mobile}) => mobile});
     .page-wrapper {
       height: 100%;
       padding: 11.2rem 2.4rem 5rem;
@@ -63,7 +63,7 @@ export const StyledHomePage = styled.main`
 
   @media screen and (min-width: 768px) and (max-width: 1439px) {
     padding-top: 12.55rem;
-    background-image: url(${({ tablet }) => tablet});
+    background-image: url(${({tablet}) => tablet});
     .page-wrapper {
       display: flex;
       flex-direction: column;
@@ -85,7 +85,7 @@ export const StyledHomePage = styled.main`
   @media screen and (min-width: 1440px) {
     padding-inline: 11.5%;
     padding-bottom: 14.5vh;
-    background-image: url(${({ desktop }) => desktop});
+    background-image: url(${({desktop}) => desktop});
     .page-wrapper {
       display: flex;
       justify-content: space-between;

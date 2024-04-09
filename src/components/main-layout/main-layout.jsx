@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { StyledMainLayout } from "./main-layout.styled";
 
 const MainLayout = () => {
+
   return (
     <StyledMainLayout>
       <Header />
