@@ -191,3 +191,9 @@ export const StyledDestinitionContent = styled.section`
     }
   }
 `;
+
+export const StyledDestinationImade = styled.div`
+  width: 44.5rem;
+  height: 44.5rem;
+  background-image: url(${({ background }) => background});
+`;

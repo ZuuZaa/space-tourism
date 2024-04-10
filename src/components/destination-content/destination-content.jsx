@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { NAV_LINKS } from "../../config/constans";
-import { StyledDestinitionContent } from "./destinition-content.styled";
+import {
+  StyledDestinationImade,
+  StyledDestinitionContent,
+} from "./destinition-content.styled";
 
 export const DestinationContent = () => {
-  const [target, setTarget] = useState({});
+  const [target, setTarget] = useState(NAV_LINKS.DESTINATION.items[0]);
   const { name } = useParams();
 
   useEffect(() => {
@@ -12,19 +15,10 @@ export const DestinationContent = () => {
     console.log(NAV_LINKS.DESTINATION.items.find((item) => item.name === name));
   }, [name, target]);
 
-    const getImage = async () => {
-      try {
-        const { default: image } = await import(`${target?.images?.png}`);
-        return image;
-      } catch (error) {
-        return null;
-      }
-    };
-
   return (
     <StyledDestinitionContent>
       <div className="destination-content">
-        <figure className="destination-img">
+        <figure>
           <img src={target?.image} alt={name} />
         </figure>
         <div className="destination-card">
@@ -34,8 +28,7 @@ export const DestinationContent = () => {
                 <li className="nav-link">
                   <NavLink
                     to={`/destination/${item.name}`}
-                    activeclassname="active"
-                    value={item.name}
+                    activeClassName="active"
                   >
                     {item.name}
                   </NavLink>

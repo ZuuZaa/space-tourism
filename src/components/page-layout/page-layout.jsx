@@ -7,7 +7,7 @@ export const PageLayout = ({ pageDetails, children }) => {
         <span className="muted">{pageDetails.order}</span>
         {pageDetails.description}
       </section>
-      <section>{children}</section>
+      {children}
     </StyledPageLayout>
   );
 };

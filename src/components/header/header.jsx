@@ -27,7 +27,7 @@ export const Header = () => {
             <li className="nav-text" key={item.name}>
               <NavLink
                 exact={item.active.toString()}
-                to={item.items? `${item.link}/${item.items[0].name}` : item.link}
+                to={item.items? `${item.link}/${item.items[1].name}` : item.link}
                 activeclassname="active"
               >
                 <span className="bold-text">{item.order}</span>
