@@ -1,14 +1,14 @@
 import { Header } from "@/components/header";
 import { Outlet } from "react-router-dom";
-import { StyledMainLayout } from "./main-layout.styled";
+import "./main-layout.scss";
 
 const MainLayout = () => {
 
   return (
-    <StyledMainLayout>
+    <div className="main-layout">
       <Header />
       <Outlet />
-    </StyledMainLayout>
+    </div>
   );
 };
 

@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import { NAV_LINKS } from "../../config/constans";
-import {
-  StyledDestinationImade,
-  StyledDestinitionContent,
-} from "./destinition-content.styled";
+import { NAV_LINKS } from "@/config/constans";
+import "./destination-content.scss";
 
 export const DestinationContent = () => {
   const [target, setTarget] = useState(NAV_LINKS.DESTINATION.items[0]);
@@ -13,12 +10,12 @@ export const DestinationContent = () => {
   useEffect(() => {
     setTarget(NAV_LINKS.DESTINATION.items.find((item) => item.name === name));
     console.log(NAV_LINKS.DESTINATION.items.find((item) => item.name === name));
-  }, [name, target]);
+  }, [name]);
 
   return (
-    <StyledDestinitionContent>
+    <div className="destination-container">
       <div className="destination-content">
-        <figure>
+        <figure className="destination-img">
           <img src={target?.image} alt={name} />
         </figure>
         <div className="destination-card">
@@ -42,7 +39,7 @@ export const DestinationContent = () => {
           <div className="card-footer">
             <div className="distance">
               <p className="subheading-2">AVG. DISTANCE</p>
-              <p className="text">{target?.distance}</p>
+              <p className="text">{`${target?.distance} km`} </p>
             </div>
             <div className="time">
               <p className="subheading-2">Est. travel time</p>
@@ -51,6 +48,6 @@ export const DestinationContent = () => {
           </div>
         </div>
       </div>
-    </StyledDestinitionContent>
+    </div>
   );
 };

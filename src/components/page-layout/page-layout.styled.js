@@ -13,9 +13,8 @@ export const StyledPageLayout = styled.main`
 
   @media only screen and (min-width: 768px) and (max-width: 1439px) {
     background-image: url(${({ tablet }) => tablet});
-    padding: 13vh 2.4rem 0;
+    padding: 13.6rem 2.4rem 6.2rem;
     text-align: start;
-    height: calc(100vh - 9.8rem);
     &:has(.tech-container) {
       padding-inline: 0;
     }
