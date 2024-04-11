@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { NAV_LINKS } from "@/config/constans";
+import TabLinks from "@/components/tab-links";
 import "./destination-content.scss";
 
 const DestinationContent = () => {
@@ -8,7 +9,7 @@ const DestinationContent = () => {
   const { name } = useParams();
 
   useEffect(() => {
-    setTarget(NAV_LINKS.DESTINATION.items.find((item) => item.link === name));
+    setTarget(NAV_LINKS.DESTINATION.items.find((item) => item.id === name));
   }, [name]);
 
   return (
@@ -18,20 +19,7 @@ const DestinationContent = () => {
           <img src={target?.image} alt={name} />
         </figure>
         <div className="destination-card">
-          <nav>
-            <ul>
-              {NAV_LINKS.DESTINATION.items.map((item) => (
-                <li className="nav-link">
-                  <NavLink
-                    to={`/destination/${item.link}`}
-                    activeClassName="active"
-                  >
-                    {item.name}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <TabLinks endpoint="destination" />
           <h2 className="destination-name">{target?.name}</h2>
           <p className="destination-decsription">{target?.description}</p>
           <hr />
@@ -50,6 +38,5 @@ const DestinationContent = () => {
     </div>
   );
 };
-
 
 export default DestinationContent;

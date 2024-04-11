@@ -27,7 +27,7 @@ const Header = () => {
             <li className="nav-text" key={item.name}>
               <NavLink
                 exact={item.active.toString()}
-                to={item.items? `${item.link}/${item.items[0].link}` : item.link}
+                to={item.items? `${item.link}/${item.items[0].id}` : item.link}
                 activeclassname="active"
               >
                 <span className="bold-text">{item.order}</span>

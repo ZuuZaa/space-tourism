@@ -5,7 +5,7 @@ const PageLayout = ({ pageDetails, children }) => {
     <StyledPageLayout className="page-container" {...pageDetails.background}>
       <section className="subheading-1">
         <span className="muted">{pageDetails.order}</span>
-        {pageDetails.description}
+        <span>{pageDetails.description}</span>
       </section>
       {children}
     </StyledPageLayout>

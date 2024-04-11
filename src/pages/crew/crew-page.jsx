@@ -1,6 +1,6 @@
 import { NAV_LINKS } from "@/config/constans";
-import CrewContent from "./crew-content";
 import PageLayout from "@/components/page-layout";
+import CrewContent from "./components/crew-content";
 
 const CrewPage = () => {
   return (
