@@ -1,6 +1,6 @@
-import { PageLayout } from "@/components/page-layout";
 import { NAV_LINKS } from "@/config/constans";
-import { DestinationContent } from "../../components/destination-content/destination-content";
+import DestinationContent from "./destination-content";
+import PageLayout from "@/components/page-layout";
 
 const DestinationPage = () => {
   return (

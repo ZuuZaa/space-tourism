@@ -3,13 +3,12 @@ import { NavLink, useParams } from "react-router-dom";
 import { NAV_LINKS } from "@/config/constans";
 import "./destination-content.scss";
 
-export const DestinationContent = () => {
+const DestinationContent = () => {
   const [target, setTarget] = useState(NAV_LINKS.DESTINATION.items[0]);
   const { name } = useParams();
 
   useEffect(() => {
-    setTarget(NAV_LINKS.DESTINATION.items.find((item) => item.name === name));
-    console.log(NAV_LINKS.DESTINATION.items.find((item) => item.name === name));
+    setTarget(NAV_LINKS.DESTINATION.items.find((item) => item.link === name));
   }, [name]);
 
   return (
@@ -24,7 +23,7 @@ export const DestinationContent = () => {
               {NAV_LINKS.DESTINATION.items.map((item) => (
                 <li className="nav-link">
                   <NavLink
-                    to={`/destination/${item.name}`}
+                    to={`/destination/${item.link}`}
                     activeClassName="active"
                   >
                     {item.name}
@@ -51,3 +50,6 @@ export const DestinationContent = () => {
     </div>
   );
 };
+
+
+export default DestinationContent;

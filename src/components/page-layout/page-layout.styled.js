@@ -26,6 +26,7 @@ export const StyledPageLayout = styled.main`
 
     .subheading-1 {
       padding-left: 0.7rem;
+      margin-bottom: 6.4rem;
     }
 
     &:has(.tech-container) {

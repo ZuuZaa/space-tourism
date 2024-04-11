@@ -1,6 +1,6 @@
-import { Header } from "@/components/header";
 import { Outlet } from "react-router-dom";
 import "./main-layout.scss";
+import Header from "@/components/header";
 
 const MainLayout = () => {
 

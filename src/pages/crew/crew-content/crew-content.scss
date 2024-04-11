@@ -1,4 +1,4 @@
-@use "assets/scss/colors.scss";
+@import "@/assets/scss/colors";
 
 
 .crew-container {
@@ -26,7 +26,7 @@
                     justify-content: space-between;
 
                     a {
-                        background: colors.$white;
+                        background: $color-white;
                         display: inline-block;
                         border-radius: 50%;
                         opacity: .17;
@@ -43,15 +43,13 @@
 
 }
 
-@media only screen and (max-width: 768px) {
-    .page-layout:has(.crew-container) {
-        padding-bottom: 0;
-    }
+@media only screen and (max-width: 767px) {
 
     .crew-container {
         display: flex;
         flex-direction: column-reverse;
         text-align: center;
+        padding-bottom: 5.4rem;
 
         .crew-content {
 
@@ -92,6 +90,7 @@
 
                 img {
                     height: 100%;
+                    object-fit: cover;
                 }
             }
         }
@@ -141,7 +140,6 @@
 
         .image-container {
             flex-grow: 1;
-            padding: 4rem;
             display: flex;
             justify-content: center;
             position: relative;
@@ -149,12 +147,11 @@
             .image-wrapper {
                 position: absolute;
                 top: 4rem;
-                align-self: stretch;
                 bottom: 0;
-                height: calc(100% - 4rem);
+                align-self: stretch;
 
                 img {
-                    height: 100%;
+                    width: 70%;
                 }
             }
         }
@@ -209,6 +206,10 @@
         .image-wrapper {
             position: absolute;
             bottom: 0;
+
+            img {
+                width: 100%;
+            }
 
         }
     }

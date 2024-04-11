@@ -1,27 +1,18 @@
-import data from "data.json";
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
-import commander from "assets/images/crew/image-douglas-hurley.png";
-import specialist from "assets/images/crew/image-mark-shuttleworth.png";
-import pilot from "assets/images/crew/image-victor-glover.png";
-import engineer from "assets/images/crew/image-anousheh-ansari.png";
 import { NavLink } from "react-router-dom"
+import { NAV_LINKS } from "@/config/constans";
+import "./crew-content.scss";
 
 
-export const CrewContent = () => {
+const CrewContent = () => {
 
   const [target, setTarget] = useState({})
   const { role } = useParams()
-  const images = { commander, specialist, pilot, engineer }
 
   useEffect(() => {
-    const target = role === "engineer"
-      ? data.crew.find(item => item.role === "Flight Engineer")
-      : role === "specialist"
-        ? data.crew.find(item => item.role === "Mission Specialist")
-        : data.crew.find(item => item.role.toLowerCase() === role)
-    setTarget(target)
-  }, [role])
+    setTarget(NAV_LINKS.CREW.items.find((item) => item.link === role));
+  }, [role]);
 
   return (
     <div className="crew-container">
@@ -53,11 +44,12 @@ export const CrewContent = () => {
         </div>
       </div>
       <div className="image-container">
-        <div className="image-wrapper">
-          <img src={images[role]} alt={role} />
-        </div>
+        <figure className="image-wrapper">
+          <img src={target?.image} alt={role} />
+        </figure>
       </div>
     </div>
   )
 }
 
+export default CrewContent;

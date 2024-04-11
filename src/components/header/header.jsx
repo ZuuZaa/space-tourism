@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import path from "@/assets/icons/path.svg";
 import { useState } from "react";
-import "./header.scss";
 import { NAV_LINKS } from "@/config/constans";
+import "./header.scss";
 
-export const Header = () => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuToggleHandler = () => setIsOpen((prev) => !prev);
   const navLinks = Object.values(NAV_LINKS)
@@ -27,7 +27,7 @@ export const Header = () => {
             <li className="nav-text" key={item.name}>
               <NavLink
                 exact={item.active.toString()}
-                to={item.items? `${item.link}/${item.items[0].name}` : item.link}
+                to={item.items? `${item.link}/${item.items[0].link}` : item.link}
                 activeclassname="active"
               >
                 <span className="bold-text">{item.order}</span>
@@ -40,3 +40,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;

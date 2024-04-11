@@ -11,14 +11,8 @@ export const Routing = () => {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="destination/:name" element={<DestinationPage />} />
-        <Route path="crew" element={<CrewPage />}>
-          {/* <Route index element={<Navigate to="commander" />} />
-          <Route path=":role" element={<CrewContent />} /> */}
-        </Route>
-        <Route path="technology" element={<TechnologyPage />}>
-          {/* <Route index element={<Navigate to="launch" />} />
-          <Route path=":id" element={<TechnologyContent />} /> */}
-        </Route>
+        <Route path="crew/:role" element={<CrewPage />} />
+        <Route path="technology/:id" element={<TechnologyPage />} />
       </Route>
     </Routes>
   );
