@@ -6,7 +6,7 @@ const TabLinks = ({endpoint}) => {
     <nav>
       <ul>
         {NAV_LINKS[endpoint.toUpperCase()].items.map((item) => (
-          <li className="nav-link">
+          <li className="nav-link" key={item.id}>
             <NavLink to={`/${endpoint}/${item.id}`} activeClassName="active">
               {item.tabTitle}
             </NavLink>
