@@ -31,4 +31,5 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 
 ## Author
 
-[Zumrud](http://localhost:3000/portfolio)
+[Zumrud](https://zumrudsportfolio.netlify.app/)
+[Linkedin](https://www.linkedin.com/in/zumrud-nerman/)
